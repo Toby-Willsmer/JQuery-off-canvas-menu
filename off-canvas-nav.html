@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Toby Willsmer" />
+    <title>Off canvas nav</title>
+    <link rel="stylesheet" href="off-canvas-nav.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="main-nav" role="menubar">
+        <ul class="main-menu" role="menu">
+          <li role="menuitem"><a href="#">Who's bad</a></li>
+          <li role="menuitem"><a href="#">You know it</a></li>
+          <li role="menuitem"><a href="#">Come on</a></li>
+          <li role="menuitem"><a href="#">I need it</a></li>
+          <li role="menuitem"><a href="#">Whoo hoo</a></li>
+          <li role="menuitem"><a href="#">I'm bad</a></li>
+        </ul>
+      </nav>
+      <div class="off-canvas-push"><!-- 'off-canvas-push' class needed to make it work -->
+        <img src="logo.jpg" class="logo" alt="Logo" />
+      </div>
+    </header>
+
+    <main role="main" class="off-canvas-push"><!-- 'off-canvas-push' class needed to make it work -->
+      <h1>A responsive off canvas menu using jQuery and CSS animations</h1>
+      <p>This menu uses jQuery to trigger the menu classes, add the hamburger and opened menu 'close'. The CSS handles all the animation and content for the closer when the menu is open. So very little JS editing needed to set it up.</p>
+      <p>I wrote this for a specific purpose that needed a logo, hence the logo!.<br/>At some point I will add dropdown sub menus and touch swipe functionality but for now this is what I need.</p>
+      <h3>Some more content</h3>
+      <p>Turducken pork pork chop beef ribs short loin sausage boudin frankfurter jowl porchetta fatback t-bone swine shankle brisket. Bresaola pork belly meatball t-bone jowl. Leberkas bresaola flank, landjaeger pork loin porchetta jowl jerky strip steak ribeye swine ham hock. Meatloaf shoulder corned beef, ball tip beef spare ribs chuck strip steak. Pork pork chop leberkas doner, porchetta meatball ham andouille kevin pancetta filet mignon pig turducken salami prosciutto.
+      </p>
+    </main>
+
+    <footer class="off-canvas-push"><!-- 'off-canvas-push' class needed to make it work -->
+      <h2>Footer content</h2>
+    </footer>
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="off-canvas-nav.js"></script>    
+
+  </body>
+</html>

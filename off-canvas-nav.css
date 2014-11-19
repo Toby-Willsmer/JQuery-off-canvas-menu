@@ -1,0 +1,125 @@
+/****** only for demo ******/
+html            { font-family: arial; line-height: 1.5; }
+body            { margin: 0; padding: 0;}
+header, footer  { width: 100%; background: #ccc; }
+ul              { list-style: none; padding: 0; margin: 0; }
+main, footer h2 { max-width: 980px; margin: 0 auto; padding: 0 10px; }
+/****** ******/
+
+body { 
+  padding-top: 50px; /* offset for fixed header */
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.logo { /* centers logo on mobile */
+  width: 150px;
+  position: relative;
+  left: 50%;
+  margin-left: -75px;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background: #3B3B3B;
+  overflow-y: auto;
+  -webkit-transform: translateX(-280px);
+  transform: translateX(-280px);
+}
+
+.menu-close,
+.main-menu a {
+  display: block;
+  width: 96%;
+  padding: 13px 2%;
+}
+
+.main-menu a {
+  color: white;
+}
+
+.off-canvas-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* the hambuger link */
+.menu-icon {
+  position: absolute;
+  left:0;
+  top:0;
+  font-size: 2.375rem;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* the 'Logo & close' in the mobile menu */
+.menu-close {
+  color: #ffcc00;
+  background: #000;
+}
+
+.menu-close:before {
+  content: "Logo here";
+}
+
+.menu-close:after {
+  content: "Close X";
+  float: right;
+}
+
+/* move the page parts */
+.main-nav,
+.off-canvas-push {
+  transition: transform 0.3s ease;
+}
+
+.main-nav.pushed { /* pushed menu */
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.off-canvas-push.pushed { /* push page content */
+  -webkit-transform: translateX(280px);
+  transform: translateX(280px);
+}
+
+@media screen and (min-width: 700px) {
+  .off-canvas-link {
+    display: none !important;  /* make sure the js generated burger and 'close' are off */
+    visibility: hidden;
+  }
+
+  .logo {
+    left: 0;
+    margin-left: 0;
+  }
+
+  .main-nav {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 0;
+    transition: none;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  .main-menu li {
+    display: inline-block;
+    margin-left: 1px;
+  }
+
+  .main-menu a {
+    width: auto;
+    padding: 15px 5px;
+  }
+}
